@@ -13,8 +13,9 @@
 
 function myButtonClicked() {
   // input
-  // const subMeat = parseInt(document.getElementById('sub-meat').value)
+  const subMeat = parseInt(document.getElementById('sub-meat').value)
   const subLength = parseInt(document.getElementById('sub-length').value)
+  
 
   // process
     if (subLength == 6) {
