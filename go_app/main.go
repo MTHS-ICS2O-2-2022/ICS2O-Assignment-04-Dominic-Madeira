@@ -6,13 +6,10 @@ package main
 
 import "fmt"
 
-
-
 func main() {
   var meat int
 	var length int
 	var price float64
-
 
   // input
   fmt.Println("This program takes your Subway order and calculates the price.")
