@@ -11,28 +11,28 @@ func main() {
 	var length int
 	var price float64
 
-  // input
-  fmt.Println("This program takes your Subway order and calculates the price.")
-  fmt.Println()
-  fmt.Print("What type of meat would you like in your sub? Please enter the corresponding number: ")
+	// input
+	fmt.Println("This program takes your Subway order and calculates the price.")
 	fmt.Println()
-  fmt.Print("1. Steak")
+	fmt.Print("What type of meat would you like in your sub? Please enter the corresponding number: ")
 	fmt.Println()
-  fmt.Print("2. Ham")
+	fmt.Print("1. Steak")
 	fmt.Println()
-  fmt.Print("3. Chicken")
+	fmt.Print("2. Ham")
 	fmt.Println()
-  fmt.Print("4. Turkey")
+	fmt.Print("3. Chicken")
 	fmt.Println()
-  fmt.Scanln(&meat)
+	fmt.Print("4. Turkey")
 	fmt.Println()
-  fmt.Print("What length would you like your sub? Please enter the corresponding number: ")
+	fmt.Scanln(&meat)
 	fmt.Println()
-  fmt.Print("1. Six-inch")
+	fmt.Print("What length would you like your sub? Please enter the corresponding number: ")
 	fmt.Println()
-  fmt.Print("2. Footlong")
+	fmt.Print("1. Six-inch")
 	fmt.Println()
-  fmt.Scanln(&length)
+	fmt.Print("2. Footlong")
+	fmt.Println()
+	fmt.Scanln(&length)
 
 	// process
 	if length == 1 {
@@ -70,5 +70,5 @@ func main() {
 	fmt.Println("Your total is $", priceFormatted, "Thank you for eating at Subway!")
 	}
 
-  fmt.Println("\nDone.")
+	fmt.Println("\nDone.")
 }
