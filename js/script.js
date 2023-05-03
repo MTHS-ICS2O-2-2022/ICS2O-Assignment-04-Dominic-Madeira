@@ -40,12 +40,12 @@ function myButtonClicked() {
       const price = TAX * cost + cost
       document.getElementById('answer').innerHTML = 'Your total comes to $' + price.toFixed(2) + '. Thank you for eating at Subway!'
     } else {
-      document.getElementById('answer').innerHTML = 'Please fill out the form completly.'
+      document.getElementById('answer').innerHTML = 'Please fill out the form completely.'
     }
   
   } else  if (subLength == 12) {
 
-        if (subMeat == 1) {
+    if (subMeat == 1) {
       const cost = 7.00 * 1.75
       const TAX = 0.13
       const price = TAX * cost + cost
@@ -66,59 +66,9 @@ function myButtonClicked() {
       const price = TAX * cost + cost
       document.getElementById('answer').innerHTML = 'Your total comes to $' + price.toFixed(2) + '. Thank you for eating at Subway!'
     } else {
-      document.getElementById('answer').innerHTML = 'Please fill out the form completly.'
+      document.getElementById('answer').innerHTML = 'Please fill out the form completely.'
     }
   } else {
-    document.getElementById('answer').innerHTML = 'Please fill out the form completly.'
+    document.getElementById('answer').innerHTML = 'Please fill out the form completely.'
   }
-
-
-  
-  // if (subLength == 6) {
-  //   if (subMeat == 1) {
-  //     const cost = 7.00
-  //     const TAX = 0.13
-  //     const price = TAX * cost + cost
-  //     document.getElementById('answer').innerHTML = 'Your total comes to $' + price.toFixed(2) + '. Thank you for eating at Subway!'
-  //   } else if (subMeat == 2) {
-  //     const cost = 5.00
-  //     const TAX = 0.13
-  //     const price = TAX * cost + cost
-  //     document.getElementById('answer').innerHTML = 'Your total comes to $' + price.toFixed(2) + '. Thank you for eating at Subway!'
-  //   } else if (subMeat == 3) {
-  //     const cost = 5.50
-  //     const TAX = 0.13
-  //     const price = TAX * cost + cost
-  //     document.getElementById('answer').innerHTML = 'Your total comes to $' + price.toFixed(2) + '. Thank you for eating at Subway!'
-  //   } else {
-  //     const cost = 6.00
-  //     const TAX = 0.13
-  //     const price = TAX * cost + cost
-  //     document.getElementById('answer').innerHTML = 'Your total comes to $' + price.toFixed(2) + '. Thank you for eating at Subway!'
-  //   }
-  
-  // } else {
-
-  //       if (subMeat == 1) {
-  //     const cost = 7.00 * 1.75
-  //     const TAX = 0.13
-  //     const price = TAX * cost + cost
-  //     document.getElementById('answer').innerHTML = 'Your total comes to $' + price.toFixed(2) + '. Thank you for eating at Subway!'
-  //   } else if (subMeat == 2) {
-  //     const cost = 5.00 * 1.75
-  //     const TAX = 0.13
-  //     const price = TAX * cost + cost
-  //     document.getElementById('answer').innerHTML = 'Your total comes to $' + price.toFixed(2) + '. Thank you for eating at Subway!'
-  //   } else if (subMeat == 3) {
-  //     const cost = 5.50 * 1.75
-  //     const TAX = 0.13
-  //     const price = TAX * cost + cost
-  //     document.getElementById('answer').innerHTML = 'Your total comes to $' + price.toFixed(2) + '. Thank you for eating at Subway!'
-  //   } else {
-  //     const cost = 6.00 *1.75
-  //     const TAX = 0.13
-  //     const price = TAX * cost + cost
-  //     document.getElementById('answer').innerHTML = 'Your total comes to $' + price.toFixed(2) + '. Thank you for eating at Subway!'
-  //   }
-  // }
 }
