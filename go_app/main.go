@@ -7,7 +7,7 @@ package main
 import "fmt"
 
 func main() {
-  var meat int
+	var meat int
 	var length int
 	var price float64
 
