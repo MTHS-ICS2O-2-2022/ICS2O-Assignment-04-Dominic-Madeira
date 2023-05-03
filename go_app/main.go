@@ -64,10 +64,10 @@ func main() {
 	}
 
 	// output
-	if price > 0{
-	priceFormatted := fmt.Sprintf("%.2f", price)
-	fmt.Println()
-	fmt.Println("Your total is $", priceFormatted, "Thank you for eating at Subway!")
+	if price > 0 {
+		priceFormatted := fmt.Sprintf("%.2f", price)
+		fmt.Println()
+		fmt.Println("Your total is $", priceFormatted, "Thank you for eating at Subway!")
 	}
 
 	fmt.Println("\nDone.")
