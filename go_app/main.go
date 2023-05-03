@@ -4,9 +4,8 @@
 // This program takes your Subway order and calculates the price.
 package main
 
-import (
-  "fmt"
-)
+import "fmt"
+
 
 
 func main() {
