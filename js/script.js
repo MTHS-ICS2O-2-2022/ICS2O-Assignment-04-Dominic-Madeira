@@ -6,62 +6,50 @@
 
 "use strict"
 
-
 /**
  * This function uses a selection component from https://github.com/CreativeIT/getmdl-select
  */
 
 function myButtonClicked() {
   // input
-  const TAX = 0.13
-  const subMeat = parseInt(document.getElementById('sub-meat').value)
-  const subLength = parseInt(document.getElementById('sub-length').value)
+  const TAX = 1.13
+  const COST_SIX_INCH = 1
+  const COST_TWELVE_INCH = 1.75
+  const COST_STEAK = 7.0
+  const COST_HAM = 5.0
+  const COST_CHICKEN = 5.5
+  const COST_TURKEY = 6.0
+  let costLength = 0
   let cost = 0
+  let price = 0
+
+  // input
+  const subMeat = parseInt(document.getElementById("sub-meat").value)
+  const subLength = parseInt(document.getElementById("sub-length").value)
 
   // process
-    if (subLength == 6) {
-    if (subMeat == 1) {
-      cost = 7.00
-      document.getElementById('answer').innerHTML = 'Your total comes to $' + price.toFixed(2) + '. Thank you for eating at Subway!'
-    } else if (subMeat == 2) {
-      cost = 5.00
-      document.getElementById('answer').innerHTML = 'Your total comes to $' + price.toFixed(2) + '. Thank you for eating at Subway!'
-    } else if (subMeat == 3) {
-      cost = 5.50
-      document.getElementById('answer').innerHTML = 'Your total comes to $' + price.toFixed(2) + '. Thank you for eating at Subway!'
-    } else if (subMeat == 4) {
-      cost = 6.00
-      document.getElementById('answer').innerHTML = 'Your total comes to $' + price.toFixed(2) + '. Thank you for eating at Subway!'
-    } else {
-      document.getElementById('answer').innerHTML = 'Please fill out the form completely.'
-    }
-    let price = TAX * cost + cost
-  } else  if (subLength == 12) {
 
-    if (subMeat == 1) {
-      const cost = 7.00 * 1.75
-      const TAX = 0.13
-      const price = TAX * cost + cost
-      document.getElementById('answer').innerHTML = 'Your total comes to $' + price.toFixed(2) + '. Thank you for eating at Subway!'
-    } else if (subMeat == 2) {
-      const cost = 5.00 * 1.75
-      const TAX = 0.13
-      const price = TAX * cost + cost
-      document.getElementById('answer').innerHTML = 'Your total comes to $' + price.toFixed(2) + '. Thank you for eating at Subway!'
-    } else if (subMeat == 3) {
-      const cost = 5.50 * 1.75
-      const TAX = 0.13
-      const price = TAX * cost + cost
-      document.getElementById('answer').innerHTML = 'Your total comes to $' + price.toFixed(2) + '. Thank you for eating at Subway!'
-    } else if (subMeat == 4) {
-      const cost = 6.00 *1.75
-      const TAX = 0.13
-      const price = TAX * cost + cost
-      document.getElementById('answer').innerHTML = 'Your total comes to $' + price.toFixed(2) + '. Thank you for eating at Subway!'
-    } else {
-      document.getElementById('answer').innerHTML = 'Please fill out the form completely.'
-    }
+
+
+  if (subLength == 6) {
+    costLength = COST_SIX_INCH
   } else {
-    document.getElementById('answer').innerHTML = 'Please fill out the form completely.'
+    costLength = COST_TWELVE_INCH
   }
+
+
+  if (subMeat == 1) {
+    cost = COST_STEAK
+  } else if (subMeat == 2) {
+    cost = COST_HAM
+  } else if (subMeat == 3) {
+    cost = COST_CHICKEN
+  } else {
+    cost = COST_TURKEY
+  }
+
+  price = (costLength * cost) * TAX
+
+  // output
+  document.getElementById("answer").innerHTML = "Your total comes to $" + price.toFixed(2) + ". Thank you for eating at Subway!"
 }

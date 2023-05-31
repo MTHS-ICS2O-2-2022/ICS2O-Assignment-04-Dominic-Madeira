@@ -7,9 +7,18 @@ package main
 import "fmt"
 
 func main() {
-	var meat int
+	const tax float64 = 1.13
+	const sixInchPrice float64 = 1
+	const twelveInchPrice float64 = 1.75
+	const costSteak float64 = 7
+	const costHam float64 = 5
+	const costChicken float64 = 5.50
+	const costTurkey float64 = 6
+	var meatNumber int
 	var length int
+	var cost float64
 	var price float64
+	var lengthPrice float64
 
 	// input
 	fmt.Println("This program takes your Subway order and calculates the price.")
@@ -24,7 +33,7 @@ func main() {
 	fmt.Println()
 	fmt.Print("4. Turkey")
 	fmt.Println()
-	fmt.Scanln(&meat)
+	fmt.Scanln(&meatNumber)
 	fmt.Println()
 	fmt.Print("What length would you like your sub? Please enter the corresponding number: ")
 	fmt.Println()
@@ -36,39 +45,27 @@ func main() {
 
 	// process
 	if length == 1 {
-		if meat == 1 {
-			price = 7.00 * 1.13
-		} else if meat == 2 {
-			price = 5.00 * 1.13
-		} else if meat == 3 {
-			price = 5.50 * 1.13
-		} else if meat == 4 {
-			price = 6.00 * 1.13
-		} else {
-			fmt.Println("Invalid input.")
-		}
-	} else if length == 2 {
-		if meat == 1 {
-			price = (7.00 * 1.75) * 1.13
-		} else if meat == 2 {
-			price = (5.00 * 1.75) * 1.13
-		} else if meat == 3 {
-			price = (5.50 * 1.75) * 1.13
-		} else if meat == 4 {
-			price = (6.00 * 1.75) * 1.13
-		} else {
-			fmt.Println("Invalid input.")
-		}
+		lengthPrice = sixInchPrice
 	} else {
-		fmt.Println("Invalid input.")
+		lengthPrice = twelveInchPrice
 	}
 
-	// output
-	if price > 0 {
-		priceFormatted := fmt.Sprintf("%.2f", price)
-		fmt.Println()
-		fmt.Println("Your total is $", priceFormatted, "Thank you for eating at Subway!")
+	if meatNumber == 1 {
+		cost = costSteak
+	} else if meatNumber == 2 {
+		cost = costHam
+	} else if meatNumber == 3 {
+		cost = costChicken
+	} else {
+		cost = costTurkey
 	}
+
+	price = (cost * lengthPrice) * tax
+
+	// output
+	priceFormatted := fmt.Sprintf("%.2f", price)
+	fmt.Println()
+	fmt.Println("Your total is $", priceFormatted, "Thank you for eating at Subway!")
 
 	fmt.Println("\nDone.")
 }
