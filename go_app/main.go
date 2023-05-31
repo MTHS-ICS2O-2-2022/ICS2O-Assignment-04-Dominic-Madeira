@@ -4,7 +4,10 @@
 // This program takes your Subway order and calculates the price.
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 func main() {
 	const tax float64 = 1.13
@@ -64,8 +67,9 @@ func main() {
 
 	// output
 	priceFormatted := fmt.Sprintf("%.2f", price)
+	stringFormatted := strings.TrimSpace("\t Your total is $\n ")
 	fmt.Println()
-	fmt.Println("Your total is $", priceFormatted, "Thank you for eating at Subway!")
+	fmt.Println(stringFormatted, priceFormatted, "Thank you for eating at Subway!")
 
 	fmt.Println("\nDone.")
 }
