@@ -7,7 +7,12 @@ package main
 import (
 	"fmt"
 	"strings"
+	"unicode"
 )
+
+func trimRightSpace(stringFormatted string) string {
+	return strings.TrimRightFunc(stringFormatted, unicode.IsSpace)
+}
 
 func main() {
 	const tax float64 = 1.13
@@ -67,9 +72,12 @@ func main() {
 
 	// output
 	priceFormatted := fmt.Sprintf("%.2f", price)
-	stringFormatted := strings.TrimSpace("\t Your total is $\n ")
+	stringFormatted := trimRightSpace(`Your total is $`)
+
 	fmt.Println()
-	fmt.Println(stringFormatted, priceFormatted, "Thank you for eating at Subway!")
+	fmt.Printf("%s", stringFormatted)
+	fmt.Print(priceFormatted, " Thank you for eating at Subway!")
+	fmt.Println()
 
 	fmt.Println("\nDone.")
 }
